@@ -5,15 +5,28 @@ function toRomanNumerals(number) {
   
   let stringNum = number.toString(); 
   // const numeralArray = []
-
+  for (const letter of stringNum) {
+    
+  }
   if (stringNum.length === 1)
     if (number < 4) {
       return stringNum = "I".repeat(number);
+    } else if (number === 5){
+      return stringNum = "V";
+    } else if (number === 4) {
+      return stringNum = "IV";
+    } else if ((number > 5) && (number < 9)) {
+      return stringNum = "V" + "I".repeat(number - 5);
+    } else {
+      return stringNum = "IX";
     }
 
   
   };
   
+
+  // https://github.com/chansen1395/thursday8-19
+
   // if number is less then 4, add I * number
   // if 
   
@@ -30,3 +43,4 @@ function toRomanNumerals(number) {
   // 1 = I
 // 2 = II
 // 3 = III 
+// Co-authored by Anna Clarke: <annac.klingberg@gmail.com>
